@@ -19,6 +19,7 @@ public class Jogadas : Tabuleiro
       if(i == 2)
       {
         Console.Clear();
+        Verifica.Verifica1();
         Tabuleiro.PreencherTabuleiro();
         Jogador2(); 
       }
@@ -44,6 +45,7 @@ public class Jogadas : Tabuleiro
       if(i == 2)
       {
         Console.Clear();
+        Verifica.Verifica2();
         Tabuleiro.PreencherTabuleiro();
         Jogador1(); 
       }
