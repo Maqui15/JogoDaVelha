@@ -5,8 +5,6 @@ public class Tabuleiro
   public static string[,] _Tabua = new string[3,3];
   public static int       _contador= 0;   
 
-  
-
   public static void ImprimirTabuleiro()
   {
     for (int k=0; k<3 ; k++)
@@ -15,11 +13,9 @@ public class Tabuleiro
       {
         _contador++;
         _Tabua[k,ç] = _contador.ToString();
-        
       } 
     }  
   }
-
   public static void PreencherTabuleiro()
   {
     for (int k=0; k<3 ; k++)
@@ -28,7 +24,6 @@ public class Tabuleiro
       {
         Console.Write("{0} ",_Tabua[k,ç]);
       }
-
       Console.WriteLine(" ");
     }
   }

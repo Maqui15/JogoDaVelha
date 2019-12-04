@@ -4,54 +4,65 @@ public class Jogadas : Tabuleiro
 {
   public static void Jogador1()
   {
-    Console.WriteLine("Digite uma casa");
+    Console.WriteLine("Jogador 1 digite uma casa");
     string Valor = Console.ReadLine();
-    for(int i=0; i<3; i++)
+    try 
     {
-      for(int j=0; j<3; j++)
+      for(int i=0; i<3; i++)
       {
-        if(Valor == _Tabua[i,j])
+        for(int j=0; j<3; j++)
         {
-          _Tabua[i,j] = "X";
+          if(Valor == _Tabua[i,j])
+          {
+            _Tabua[i,j] = "X";
+          }
         }
-      }
 
-      if(i == 2)
-      {
-        Console.Clear();
-        Verifica.Verifica1();
-        Tabuleiro.PreencherTabuleiro();
-        Jogador2(); 
+        if(i == 2)
+        {
+          Console.Clear();
+          Verifica.Verifica1();
+          Tabuleiro.PreencherTabuleiro();
+          Jogador2(); 
+        }      
       }
-
-      
-    } 
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Jogador 1 você deve selecionar uma casa livre. O erro foi {0}", erro_ocorrido.Message);
+    }  
   }
 
   public static void Jogador2()
   {
-    Console.WriteLine("Digite uma casa");
+    Console.WriteLine("Jogador 2 digite uma casa");
     string Valor = Console.ReadLine();
-    for(int i=0; i<3; i++)
+    try
     {
-      for(int j=0; j<3; j++)
+      for(int i=0; i<3; i++)
       {
-        if(Valor == _Tabua[i,j])
+        for(int j=0; j<3; j++)
         {
-          _Tabua[i,j] = "O";
+          if(Valor == _Tabua[i,j])
+          {
+            {
+              _Tabua[i,j] = "O";
+            }
+          }
         }
-      }
 
-      if(i == 2)
-      {
-        Console.Clear();
-        Verifica.Verifica2();
-        Tabuleiro.PreencherTabuleiro();
-        Jogador1(); 
-      }
-
-      
+        if(i == 2)
+        {
+          Console.Clear();
+          Verifica.Verifica2();
+          Tabuleiro.PreencherTabuleiro();
+          Jogador1(); 
+        }
+      } 
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Jogador 2 você deve selecionar uma casa livre. O erro foi {0}", erro_ocorrido.Message);
     } 
   }
-
 }

@@ -73,5 +73,4 @@ public class Verifica : Jogadas
       Console.WriteLine("Jogador 2 Venceu");
     }
   }
-
 }
