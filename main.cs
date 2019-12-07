@@ -31,6 +31,8 @@ class MainClass {
     {
       Console.Clear();
       Tabuleiro.ImprimirTabuleiro();
+      Tabuleiro.PreencherTabuleiro();
+      Computador.Player();
     }
 
     

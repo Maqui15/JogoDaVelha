@@ -157,7 +157,7 @@ public class Verifica : Jogadas
     }
     try
     {
-      if(_Tabua[1,0] == "O" && _Tabua[1,1] == "O" && _Tabua[1,2] == "XO")
+      if(_Tabua[1,0] == "O" && _Tabua[1,1] == "O" && _Tabua[1,2] == "O")
       {
         Console.ForegroundColor = ConsoleColor.Black;
         Console.BackgroundColor = ConsoleColor.White;
@@ -184,7 +184,7 @@ public class Verifica : Jogadas
     }
     catch (Exception erro_ocorrido)
     {
-      Console.WriteLine("Jogador 1 venceu!", erro_ocorrido.Message);
+      Console.WriteLine("Jogador 2 venceu!", erro_ocorrido.Message);
       PararCodigo();
     }
     try
@@ -272,5 +272,140 @@ public class Verifica : Jogadas
   public static void PararCodigo()
   {
     System.Environment.Exit(1);
+  }
+
+  public static void verifica3()
+  {
+
+    SoundPlayer player = new  SoundPlayer(@"Sound.wav");
+    
+    try
+    {
+      if(_Tabua[0,0] == "O" && _Tabua[0,1] == "O" && _Tabua[0,2] == "O")
+      {
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.White;
+      player.Play();
+      Console.ResetColor();
+      throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[1,0] == "O" && _Tabua[1,1] == "O" && _Tabua[1,2] == "O")
+      {
+        Console.ForegroundColor = ConsoleColor.Black;
+        Console.BackgroundColor = ConsoleColor.White;
+        player.Play();
+        Console.ResetColor();
+        throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[2,0] == "O" && _Tabua[2,1] == "O" && _Tabua[2,2] == "O")
+      {
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.White;
+      player.Play();
+      Console.ResetColor();
+      throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[0,0] == "O" && _Tabua[1,1] == "O" && _Tabua[2,2] == "O")
+      {
+        Console.ForegroundColor = ConsoleColor.Black;
+        Console.BackgroundColor = ConsoleColor.White;
+        player.Play();
+        Console.ResetColor();
+        throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[2,0] == "O" && _Tabua[1,1] == "O" && _Tabua[0,2] == "O")
+      {
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.White;
+      player.Play();
+      Console.ResetColor();
+      throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[0,0] == "O" && _Tabua[1,0] == "O" && _Tabua[2,0] == "O")
+      {
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.White;
+      player.Play();
+      Console.ResetColor();
+      throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[0,1] == "O" && _Tabua[1,1] == "O" && _Tabua[2,1] == "O")
+      {
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.White;
+      player.Play();
+      Console.ResetColor();
+      throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
+    try
+    {
+      if(_Tabua[0,2] == "O" && _Tabua[1,2] == "O" && _Tabua[2,2] == "O")
+      {
+        Console.ForegroundColor = ConsoleColor.Black;
+        Console.BackgroundColor = ConsoleColor.White;
+        player.Play();
+        Console.ResetColor();
+        throw new Exception();
+      }
+    }
+    catch (Exception erro_ocorrido)
+    {
+      Console.WriteLine("Computador venceu!", erro_ocorrido.Message);
+      PararCodigo();
+    }
   }
 }
