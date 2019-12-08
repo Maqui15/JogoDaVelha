@@ -5,11 +5,6 @@ public class Tabuleiro
   public static string[,] _Tabua = new string[3,3];
   public static int       _contador= 0;   
 
-  
-
- 
-  
-
   public static void ImprimirTabuleiro()
   {
     for (int k=0; k<3 ; k++)

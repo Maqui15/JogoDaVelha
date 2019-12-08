@@ -271,6 +271,8 @@ public class Verifica : Jogadas
 
   public static void PararCodigo()
   {
+    Console.WriteLine("favor apertar qualquer tecla, para sair!");
+    Console.ReadKey();
     System.Environment.Exit(1);
   }
 
